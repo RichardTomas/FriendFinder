@@ -10,20 +10,12 @@ var friends = require("../data/friends.js");
 // ===============================================================================
 module.exports = function(app) {
     // API GET Requests
-    // Below code handles when users "visit" a page.
-    // In each of the below cases when a user visits a link
-    // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
     // ---------------------------------------------------------------------------
     app.get("/api/friends", function(req, res) {
         res.json(friends);
     });
 
     // API POST Requests
-    // Below code handles when a user submits a form and thus submits data to the server.
-    // In each of the below cases, when a user submits form data (a JSON object)
-    // ...the JSON is pushed to the appropriate JavaScript array
-    // (ex. User fills out a reservation request... this data is then sent to the server...
-    // Then the server saves the data to the tableData array)
     // ---------------------------------------------------------------------------
     app.post("/api/friends", function(req, res) {
         // set defaults for the bestmatch placeholder
@@ -81,19 +73,11 @@ module.exports = function(app) {
 
         console.log('Lowest Score is: ' + lowest);
         console.log('Index of the Best Match in Friends Array is: ' + bestMatch);
-        
-
         console.log('Your best match is: ' + friends[bestMatch].name);
 
-        // Return the friends array as JSON.
+        // Return the friends object as JSON.
         res.json(friends[bestMatch]);
     });
 
-}
+} // closes app
 
-// app.post("/api/clear", function() {
-//     // Empty out the arrays of data
-//     tableData = [];
-//     waitListData = [];
-//     console.log(tableData);
-//   });
