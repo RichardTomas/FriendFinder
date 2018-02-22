@@ -38,7 +38,7 @@ var friends = [{
     },
     {
         "name": "Gollum",
-        "photo": "https://www.classtools.net/FB/1956-PTcV2K",
+        "photo": "http://casenightmaregreen.blogspot.com/2012/12/pursuing-precious-grad-school.html",
         "scores": [
             5,
             1,
